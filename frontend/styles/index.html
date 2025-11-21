@@ -1,0 +1,15 @@
+<input type="text" id="input" placeholder="Say something...">
+<button onclick="sendMessage()">Send</button>
+<div id="response"></div>
+<script>
+async function sendMessage() {
+    const text = document.getElementById('input').value;
+    const res = await fetch('http://localhost:5000/say', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text })
+    });
+    const data = await res.json();
+    document.getElementById('response').innerText = data.response;
+}
+</script>

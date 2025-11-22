@@ -1,0 +1,9 @@
+{
+  "drinkType": "Iced Tea",
+  "size": "small",
+  "milk": "regular",
+  "extras": [
+    "whipped cream"
+  ],
+  "name": "Prince"
+}
